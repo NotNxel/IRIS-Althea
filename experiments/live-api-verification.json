@@ -1,0 +1,39 @@
+{
+  "analysis_id": "dc34a0d7-f02a-4c83-aca0-3163087041c2",
+  "comparison_id": "1f940900-5cf0-49bd-a4b2-4dddc4fce0b6",
+  "checks": [
+    {
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "path": "/analyses/dc34a0d7-f02a-4c83-aca0-3163087041c2",
+      "status": 200
+    },
+    {
+      "path": "/analyses/dc34a0d7-f02a-4c83-aca0-3163087041c2/results",
+      "status": 200
+    },
+    {
+      "path": "/analyses/dc34a0d7-f02a-4c83-aca0-3163087041c2/robustness",
+      "status": 200
+    },
+    {
+      "path": "/analyses/dc34a0d7-f02a-4c83-aca0-3163087041c2/candidates/trametinib",
+      "status": 200
+    },
+    {
+      "path": "/analyses/dc34a0d7-f02a-4c83-aca0-3163087041c2/artifacts/signature.csv",
+      "status": 200
+    },
+    {
+      "path": "/analyses/dc34a0d7-f02a-4c83-aca0-3163087041c2/artifacts/analysis_metadata.json",
+      "status": 200
+    },
+    {
+      "path": "/comparisons/1f940900-5cf0-49bd-a4b2-4dddc4fce0b6/cross_cancer.csv",
+      "status": 200
+    }
+  ],
+  "status": "passed"
+}

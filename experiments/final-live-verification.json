@@ -1,0 +1,171 @@
+{
+  "analysis_id": "c0bfd41a-f07b-4a07-a12d-0327a7a360d8",
+  "comparison_id": "91af52a1-be34-424d-80c3-a5e0c65ef63d",
+  "base_url": "http://127.0.0.1:3000/api/v1",
+  "checks": [
+    {
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "path": "/analyses/c0bfd41a-f07b-4a07-a12d-0327a7a360d8",
+      "status": 200
+    },
+    {
+      "path": "/analyses/c0bfd41a-f07b-4a07-a12d-0327a7a360d8/results",
+      "status": 200
+    },
+    {
+      "path": "/analyses/c0bfd41a-f07b-4a07-a12d-0327a7a360d8/robustness",
+      "status": 200
+    },
+    {
+      "path": "/analyses/c0bfd41a-f07b-4a07-a12d-0327a7a360d8/candidates/palbociclib",
+      "status": 200
+    },
+    {
+      "path": "/analyses/c0bfd41a-f07b-4a07-a12d-0327a7a360d8/artifacts/analysis_metadata.json",
+      "status": 200
+    },
+    {
+      "path": "/analyses/c0bfd41a-f07b-4a07-a12d-0327a7a360d8/artifacts/analysis_metadata.json",
+      "status": 200,
+      "bytes": 256683,
+      "checksum_verified": true
+    },
+    {
+      "path": "/analyses/c0bfd41a-f07b-4a07-a12d-0327a7a360d8/artifacts/candidate_rankings.csv",
+      "status": 200,
+      "rows": 1705,
+      "columns": 12,
+      "bytes": 252909,
+      "checksum_verified": true
+    },
+    {
+      "path": "/analyses/c0bfd41a-f07b-4a07-a12d-0327a7a360d8/artifacts/cross_cancer.csv",
+      "status": 200,
+      "rows": 0,
+      "columns": 6,
+      "bytes": 61,
+      "checksum_verified": true
+    },
+    {
+      "path": "/analyses/c0bfd41a-f07b-4a07-a12d-0327a7a360d8/artifacts/differential_expression.csv",
+      "status": 200,
+      "rows": 17362,
+      "columns": 7,
+      "bytes": 2083766,
+      "checksum_verified": true
+    },
+    {
+      "path": "/analyses/c0bfd41a-f07b-4a07-a12d-0327a7a360d8/artifacts/gene_level_scores.csv",
+      "status": 200,
+      "rows": 122817,
+      "columns": 8,
+      "bytes": 12704558,
+      "checksum_verified": true
+    },
+    {
+      "path": "/analyses/c0bfd41a-f07b-4a07-a12d-0327a7a360d8/artifacts/normalized_cpm.csv.gz",
+      "status": 200,
+      "rows": 17362,
+      "columns": 41,
+      "bytes": 6085828,
+      "checksum_verified": true
+    },
+    {
+      "path": "/analyses/c0bfd41a-f07b-4a07-a12d-0327a7a360d8/artifacts/raw_counts.csv.gz",
+      "status": 200,
+      "rows": 60660,
+      "columns": 41,
+      "bytes": 2212602,
+      "checksum_verified": true
+    },
+    {
+      "path": "/analyses/c0bfd41a-f07b-4a07-a12d-0327a7a360d8/artifacts/results.json",
+      "status": 200,
+      "bytes": 5694865,
+      "checksum_verified": true
+    },
+    {
+      "path": "/analyses/c0bfd41a-f07b-4a07-a12d-0327a7a360d8/artifacts/robustness.csv",
+      "status": 200,
+      "rows": 2523,
+      "columns": 10,
+      "bytes": 132383,
+      "checksum_verified": true
+    },
+    {
+      "path": "/analyses/c0bfd41a-f07b-4a07-a12d-0327a7a360d8/artifacts/signature.csv",
+      "status": 200,
+      "rows": 300,
+      "columns": 8,
+      "bytes": 38166,
+      "checksum_verified": true
+    },
+    {
+      "path": "/analyses/c0bfd41a-f07b-4a07-a12d-0327a7a360d8/artifacts/signature_baseline.csv",
+      "status": 200,
+      "rows": 300,
+      "columns": 8,
+      "bytes": 38166,
+      "checksum_verified": true
+    },
+    {
+      "path": "/analyses/c0bfd41a-f07b-4a07-a12d-0327a7a360d8/artifacts/signature_multi-context.csv",
+      "status": 200,
+      "rows": 300,
+      "columns": 8,
+      "bytes": 38166,
+      "checksum_verified": true
+    },
+    {
+      "path": "/analyses/c0bfd41a-f07b-4a07-a12d-0327a7a360d8/artifacts/signature_relaxed.csv",
+      "status": 200,
+      "rows": 600,
+      "columns": 8,
+      "bytes": 76396,
+      "checksum_verified": true
+    },
+    {
+      "path": "/analyses/c0bfd41a-f07b-4a07-a12d-0327a7a360d8/artifacts/signature_stringent.csv",
+      "status": 200,
+      "rows": 150,
+      "columns": 8,
+      "bytes": 19080,
+      "checksum_verified": true
+    },
+    {
+      "path": "/analyses/00000000-0000-0000-0000-000000000000",
+      "status": 404
+    },
+    {
+      "path": "/analyses/00000000-0000-0000-0000-000000000000/results",
+      "status": 404
+    },
+    {
+      "path": "/analyses/not-a-uuid",
+      "status": 404
+    },
+    {
+      "path": "/analyses/c0bfd41a-f07b-4a07-a12d-0327a7a360d8/candidates/__iris_missing_compound__",
+      "status": 404
+    },
+    {
+      "path": "/analyses/c0bfd41a-f07b-4a07-a12d-0327a7a360d8/artifacts/state.json",
+      "status": 404
+    },
+    {
+      "path": "/analyses/c0bfd41a-f07b-4a07-a12d-0327a7a360d8/artifacts/missing.csv",
+      "status": 404
+    },
+    {
+      "path": "/comparisons/91af52a1-be34-424d-80c3-a5e0c65ef63d/cross_cancer.csv",
+      "status": 200,
+      "rows": 1
+    }
+  ],
+  "artifacts_verified": 14,
+  "status": "passed",
+  "checks_passed": 27
+}

@@ -1,0 +1,79 @@
+{
+  "verified_at": "2026-09-19T09:35:34.119031+00:00",
+  "runs": {
+    "BRCA": {
+      "id": "d666985b-28b2-462f-a33e-211b4790c99b",
+      "summary": {
+        "tumor_samples": 20,
+        "normal_samples": 20,
+        "available_files": 1231,
+        "genes_tested": 17362,
+        "significant_genes": 2457,
+        "signature_genes": 300,
+        "up_genes": 150,
+        "down_genes": 150,
+        "mapped_signature_genes": 194,
+        "perturbations": 33132,
+        "eligible_perturbations": 11160,
+        "compounds": 1705
+      },
+      "permutation_bh_below_005": 0
+    },
+    "PRAD": {
+      "id": "09ffe0fc-4b11-4c9d-8dc8-7df8cc7dc0d6",
+      "summary": {
+        "tumor_samples": 20,
+        "normal_samples": 20,
+        "available_files": 554,
+        "genes_tested": 17113,
+        "significant_genes": 1904,
+        "signature_genes": 300,
+        "up_genes": 150,
+        "down_genes": 150,
+        "mapped_signature_genes": 140,
+        "perturbations": 33132,
+        "eligible_perturbations": 6721,
+        "compounds": 1185
+      },
+      "permutation_bh_below_005": 0
+    }
+  },
+  "browser_acceptance_run": "d666985b-28b2-462f-a33e-211b4790c99b",
+  "replay_equality": {
+    "summary": true,
+    "signature": true,
+    "candidates": true,
+    "robustness": true,
+    "validation": true
+  },
+  "comparison_id": "1f940900-5cf0-49bd-a4b2-4dddc4fce0b6",
+  "comparison": [
+    {
+      "a": "d666985b-28b2-462f-a33e-211b4790c99b",
+      "b": "09ffe0fc-4b11-4c9d-8dc8-7df8cc7dc0d6",
+      "top_k": 20,
+      "overlap": 9,
+      "jaccard": 0.2903225806451613,
+      "rank_correlation": 0.2889368710300498,
+      "common_candidates": 1040
+    }
+  ],
+  "automated_checks": {
+    "unit_api_tests": 25,
+    "real_data_integration_cancers": [
+      "TCGA-BRCA",
+      "TCGA-PRAD"
+    ],
+    "frontend_typecheck": "passed",
+    "production_build": "passed",
+    "npm_audit_known_vulnerabilities": 0
+  },
+  "browser_checks": [
+    "Typed breast cancer and submitted default form",
+    "Observed backend progress and completed results",
+    "Opened candidate context and gene evidence",
+    "Inspected robustness tables",
+    "Verified mobile width 390px has no document overflow",
+    "Selected real BRCA and PRAD runs and computed comparison"
+  ]
+}

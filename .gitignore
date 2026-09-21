@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+frontend/node_modules/
+frontend/.next/
+data/
+*.log
+.DS_Store
+.venv311/
+frontend/.next-preview/
+frontend/*.tsbuildinfo

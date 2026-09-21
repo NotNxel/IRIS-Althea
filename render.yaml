@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: iris-backend
+    runtime: docker
+    dockerfilePath: backend/Dockerfile
+    dockerContext: backend
+    plan: free
+    envVars:
+      - key: IRIS_DATA_DIR
+        value: /data
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: IRIS_CORS_ORIGINS
+        value: "https://your-app.vercel.app"
+    disk:
+      name: iris-data
+      mountPath: /data
+      sizeGB: 10

@@ -1,0 +1,17 @@
+# Known limitations
+
+1. This is a hypothesis-generation research prototype. No efficacy, safety, dosage, pharmacokinetics, animal efficacy, clinical-trial efficacy, or patient benefit is established.
+2. Welch tests on log2(CPM+1) are an exploratory simplification. No negative-binomial dispersion model, paired design, library composition correction, subtype, purity, batch, or patient covariate adjustment is implemented.
+3. The default cohort is capped at 20 independent cases per group and ordered deterministically by UUID. It is not a representative randomized sample or a full-cohort TCGA analysis. Results may depend on cohort selection, which the current threshold robustness analysis does not test.
+4. No substitute normals are used. Projects with insufficient primary tumors or solid-tissue normals stop honestly. At least three cases per group enables execution but does not assure adequate statistical power.
+5. Enrichr LINCS chemical GMTs are processed thresholded gene sets, not full L1000 expression matrices. Missing membership has zero score contribution but unknown underlying response. The score is not the official CMap connectivity score.
+6. Exact uppercase symbols omit aliases and exclude ambiguous duplicate TCGA symbols. Mapping loss is reported; genome annotation and old-symbol drift remain possible.
+7. Dose units and replicate numbers are unavailable in the source GMT. Contexts are cell/time/dose-label groups, not independent biological replicates. Same-label batches are averaged without inferred replicate weights. Median across heterogeneous contexts may hide tissue-specific behavior.
+8. Exact compound labels are identities. Salts, synonyms and aliases are not chemically reconciled, and pharmacological feasibility is not evaluated.
+9. Empirical gene-label p-values are exploratory: gene correlation is broken and observed overlap eligibility is held fixed under permutation. A 100-permutation null is coarse and should not support confirmatory significance claims. No sample-label null is implemented.
+10. Rank stability summaries condition on candidate presence. One available rank yields SD=0; this does not demonstrate robustness. Top-k membership counts must be read with the number of configurations present.
+11. Cross-cancer exclusivity only describes selected lists, not biological specificity. Cohort sizes, baseline genes, and data quality can differ across cancers.
+12. Known-compound literature checks, target/pathway validation, external cohorts, survival analysis, animal and laboratory experiments are not evaluated automatically.
+13. A single local worker provides persistence of results and cached downloads, not a durable distributed queue. Restart interrupts unfinished jobs; resubmitting reuses downloads. No cancellation, authentication, storage quota, cloud deployment, or multi-user isolation is provided.
+14. Cached raw files are verified; same-parameter new submissions recompute analysis. First-time download latency and availability depend on GDC/Enrichr. Unversioned LINCS exports are pinned locally by checksum, not guaranteed by an upstream immutable release.
+15. The directional score is sensitive to source gene-set breadth and common proliferation/stress programs. Strong reversal may reflect nonspecific toxicity or a generic cell-cycle response, not cancer-selective benefit. No cell viability, selectivity or mechanism assay is inferred.
