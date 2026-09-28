@@ -1,0 +1,68 @@
+{
+  "id": "610e7606-ba7b-4064-b174-4f3e35bf89f7",
+  "created_at": "2026-09-28T19:40:01.567228+00:00",
+  "input": "acute myeloid leukemia",
+  "parameters": {
+    "cancer": "acute myeloid leukemia",
+    "samples_per_group": 20,
+    "min_cpm": 1,
+    "min_fraction": 0.2,
+    "fdr": 0.05,
+    "effect": 1,
+    "max_genes": 150,
+    "min_overlap": 5,
+    "permutations": 100,
+    "seed": 42,
+    "top_k": 20
+  },
+  "software_version": "0.1.0",
+  "python": "3.14.6",
+  "limitations": [
+    "Exploratory Welch tests on log2(CPM+1), not a count-model differential expression analysis; no covariate or batch adjustment.",
+    "Deterministically capped, independent patient groups are not the full TCGA cohort and may not represent cancer subtypes.",
+    "Library-size CPM does not correct RNA composition bias. Normal tissue may differ in cellular composition.",
+    "LINCS GMTs are thresholded directional gene sets, not full L1000 expression matrices. Missing genes have zero contribution, not measured zero effect.",
+    "Exact uppercase gene-symbol matching only; outdated aliases can reduce coverage. Ambiguous duplicate TCGA symbols are excluded.",
+    "Dose units and replicate counts are not supplied by this GMT export. Contexts are cell/time/dose-label groups, not independent biological replicates.",
+    "Equal-weight median across contexts summarizes heterogeneous experiments; tissue relevance and pharmacological feasibility are not established.",
+    "Gene-label permutations are an exploratory null and do not preserve gene correlation or correct selection bias from overlap eligibility.",
+    "Clinical efficacy, safety, dosage, patient benefit, and literature validation are not evaluated."
+  ],
+  "dependencies": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "fastapi": "0.141.1",
+    "httpx": "0.28.1"
+  },
+  "source_checksums": {
+    "config.py": "712926479e3508a1a8b8572c67181ea1b6bd48cc3e66f132697aedb8182e7e79",
+    "io.py": "daebccfb94434c11c3c66a4256e3cec47f511122216ded516ac9d50ceab6008f",
+    "cross_cancer/compare.py": "10d103da359766130db99d973e5354b30d94202a17d4fba95a075884b88ed76b",
+    "tcga/client.py": "d65d186a01e7f45b797c7c6c515a98127decaf4c34727335acd9cf972f31dc02",
+    "differential/analyze.py": "920639190939046c8f59ae0658aa319ee36c6d66b4415deddb0712080d321284",
+    "pipeline/runner.py": "8c6d1fb8bd47c08121c0d8b38e212aaa6480e29cc4f87adee97bf210bfc3a73e",
+    "ranking/aggregate.py": "324e971958b931d3ae451a7cdbc2e1704655642a42877ec59c2cc299420060ff",
+    "robustness/compare.py": "8b1e9c3702f51a811a67b7fae0eafb9590b38698b562c742ff1541e08e3efcb6",
+    "signature/build.py": "20c5e4a19a153abfe1cecbae98f2d060164c62e7941731010f059a356bbfec69",
+    "scoring/reversal.py": "ff8473320628753f18add395ffcd4d17b1f90d52339445e35cfcbd34b73edc44",
+    "api/main.py": "d739da554c1cb7540d8844aaebeeb54063708d5f9587a50418c136a722b737ec",
+    "preprocessing/normalize.py": "0b542f2f8a0b4b74fa7229f7d6bbb7129098b602847662850720de919a69322a",
+    "perturbations/lincs.py": "2d449e4bf2ff355f439ecaaf6be5e5d87535ef90984f0104486f9fe3c4b19f21"
+  },
+  "gdc_release": {
+    "commit": "8f7c2a51ab0084b216ad1b62a3fae8b945439c53",
+    "data_release": "Data Release 46.0 - August 10, 2026",
+    "data_release_version": {
+      "major": 46,
+      "minor": 0,
+      "release_date": "2026-08-10"
+    },
+    "status": "OK",
+    "tag": "8.5.0",
+    "version": 1
+  },
+  "failed_at": "2026-09-28T19:40:05.975544+00:00",
+  "error": "Insufficient data: fewer than 3 independent Solid Tissue Normal samples.",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/neelnikhil/Desktop/Programming/ISEF - Althea/backend/app/pipeline/runner.py\", line 60, in execute\n    samples = select_samples(hits, parameters['samples_per_group'])\n  File \"/Users/neelnikhil/Desktop/Programming/ISEF - Althea/backend/app/tcga/client.py\", line 91, in select_samples\n    raise InsufficientData('Insufficient data: fewer than 3 independent ' + kind + ' samples.')\napp.tcga.client.InsufficientData: Insufficient data: fewer than 3 independent Solid Tissue Normal samples.\n"
+}

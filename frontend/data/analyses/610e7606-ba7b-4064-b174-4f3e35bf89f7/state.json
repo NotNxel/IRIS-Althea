@@ -1,0 +1,49 @@
+{
+  "id": "610e7606-ba7b-4064-b174-4f3e35bf89f7",
+  "cancer": "acute myeloid leukemia",
+  "status": "insufficient_data",
+  "created_at": "2026-09-28T19:40:01.567228+00:00",
+  "events": [
+    {
+      "at": "2026-09-28T19:40:01.583589+00:00",
+      "stage": "resolving",
+      "message": "Resolving cancer against the public TCGA project catalog"
+    },
+    {
+      "at": "2026-09-28T19:40:04.060093+00:00",
+      "stage": "retrieving",
+      "message": "Discovering open-access STAR counts"
+    }
+  ],
+  "parameters": {
+    "cancer": "acute myeloid leukemia",
+    "samples_per_group": 20,
+    "min_cpm": 1,
+    "min_fraction": 0.2,
+    "fdr": 0.05,
+    "effect": 1,
+    "max_genes": 150,
+    "min_overlap": 5,
+    "permutations": 100,
+    "seed": 42,
+    "top_k": 20
+  },
+  "stage": "retrieving",
+  "message": "Insufficient data: fewer than 3 independent Solid Tissue Normal samples.",
+  "updated_at": "2026-09-28T19:40:05.976718+00:00",
+  "project": {
+    "id": "TCGA-LAML",
+    "summary": {
+      "case_count": 200
+    },
+    "primary_site": [
+      "Hematopoietic and reticuloendothelial systems"
+    ],
+    "project_id": "TCGA-LAML",
+    "disease_type": [
+      "Myeloid Leukemias"
+    ],
+    "name": "Acute Myeloid Leukemia"
+  },
+  "error": "Insufficient data: fewer than 3 independent Solid Tissue Normal samples."
+}
