@@ -1,0 +1,401 @@
+{
+  "id": "30e8e803-34d8-461f-a3a1-0e6a04878900",
+  "created_at": "2026-09-19T09:06:09.854649+00:00",
+  "input": "breast cancer",
+  "parameters": {
+    "cancer": "breast cancer",
+    "samples_per_group": 20,
+    "min_cpm": 1,
+    "min_fraction": 0.2,
+    "fdr": 0.05,
+    "effect": 1,
+    "max_genes": 150,
+    "min_overlap": 5,
+    "permutations": 100,
+    "seed": 42,
+    "top_k": 20
+  },
+  "software_version": "0.1.0",
+  "python": "3.11.4",
+  "limitations": [
+    "Exploratory Welch tests on log2(CPM+1), not a count-model differential expression analysis; no covariate or batch adjustment.",
+    "Deterministically capped, independent patient groups are not the full TCGA cohort and may not represent cancer subtypes.",
+    "Library-size CPM does not correct RNA composition bias. Normal tissue may differ in cellular composition.",
+    "LINCS GMTs are thresholded directional gene sets, not full L1000 expression matrices. Missing genes have zero contribution, not measured zero effect.",
+    "Exact uppercase gene-symbol matching only; outdated aliases can reduce coverage. Ambiguous duplicate TCGA symbols are excluded.",
+    "Dose units and replicate counts are not supplied by this GMT export. Contexts are cell/time/dose-label groups, not independent biological replicates.",
+    "Equal-weight median across contexts summarizes heterogeneous experiments; tissue relevance and pharmacological feasibility are not established.",
+    "Gene-label permutations are an exploratory null and do not preserve gene correlation or correct selection bias from overlap eligibility.",
+    "Clinical efficacy, safety, dosage, patient benefit, and literature validation are not evaluated."
+  ],
+  "dependencies": {
+    "numpy": "2.0.2",
+    "pandas": "2.2.3",
+    "scipy": "1.13.1",
+    "fastapi": "0.115.12",
+    "httpx": "0.28.1"
+  },
+  "project": {
+    "id": "TCGA-BRCA",
+    "summary": {
+      "case_count": 1098
+    },
+    "primary_site": [
+      "Breast"
+    ],
+    "project_id": "TCGA-BRCA",
+    "disease_type": [
+      "Cystic, Mucinous and Serous Neoplasms",
+      "Adenomas and Adenocarcinomas",
+      "Fibroepithelial Neoplasms",
+      "Basal Cell Neoplasms",
+      "Ductal and Lobular Neoplasms",
+      "Epithelial Neoplasms, NOS",
+      "Squamous Cell Neoplasms",
+      "Complex Epithelial Neoplasms",
+      "Adnexal and Skin Appendage Neoplasms"
+    ],
+    "name": "Breast Invasive Carcinoma"
+  },
+  "gdc_release": {
+    "commit": "8f7c2a51ab0084b216ad1b62a3fae8b945439c53",
+    "data_release": "Data Release 46.0 - August 10, 2026",
+    "data_release_version": {
+      "major": 46,
+      "minor": 0,
+      "release_date": "2026-08-10"
+    },
+    "status": "OK",
+    "tag": "8.5.0",
+    "version": 1
+  },
+  "discovery": {
+    "available_files": 1231,
+    "selected_samples": [
+      {
+        "file_id": "e914127b-20a0-4ef1-a614-06b697da648c",
+        "file_name": "526d20dd-9df1-44c4-ab04-82109fafd3a3.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "6b681f4fd3ba95c41959fd633202a586",
+        "case_id": "02bbb632-0f7f-439d-b8f0-c86a06237424",
+        "sample_id": "2c9b563c-6f22-4a54-a232-ce7974b30458",
+        "sample_type": "Solid Tissue Normal"
+      },
+      {
+        "file_id": "86b7ddd7-1c59-4937-99ec-b30fa9b4f0bd",
+        "file_name": "a622a28b-a3ac-495b-b696-2a11e0e0e2ad.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "d0a2c7f198b4fabe4dc838ea141863a8",
+        "case_id": "05135396-df5c-49db-b34e-f4add5b65a2b",
+        "sample_id": "8511971e-372e-4dc1-96a9-3fea2298393b",
+        "sample_type": "Solid Tissue Normal"
+      },
+      {
+        "file_id": "1479c033-ebe7-423d-8460-bbe84fd5ffb6",
+        "file_name": "967fde0b-9c38-4c69-97f2-9640ebe1dc9a.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "086ffa491885cf44784476ba9ac8278c",
+        "case_id": "0bc5744c-5fa3-45bb-87d0-70a02068b392",
+        "sample_id": "a3d00f8e-39c2-4e35-bc2f-df9184b35670",
+        "sample_type": "Solid Tissue Normal"
+      },
+      {
+        "file_id": "81138059-5789-4ea7-84e9-1490aa53a283",
+        "file_name": "35ded490-54db-46b8-bc62-a5a9314cf0b2.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "86428e045962f6b4dc7fab3fb3668b71",
+        "case_id": "0f64edec-0f1f-4025-8a53-75f9534f7828",
+        "sample_id": "6fe74906-b3c0-49dc-95d8-ef19326b2b35",
+        "sample_type": "Solid Tissue Normal"
+      },
+      {
+        "file_id": "934935ae-037b-451d-a696-0679b07bd401",
+        "file_name": "90388468-c622-4114-971e-ab178e487493.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "f2cd03ac00df1dea59a90556e3a0aa59",
+        "case_id": "14267783-5624-4fe5-ba81-9d67f1017474",
+        "sample_id": "e3afa9dd-7494-4ced-adcc-267e91b971df",
+        "sample_type": "Solid Tissue Normal"
+      },
+      {
+        "file_id": "9985bb0b-d1cc-455b-80d9-f8007669cd5c",
+        "file_name": "b3435d9e-fb7f-4748-9a0b-2b532875c87e.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "e4edb1ca5cd492dc12831d1145e1664f",
+        "case_id": "1783cac1-253a-40af-a9ac-48dfb20e1ab8",
+        "sample_id": "c75bc2c7-cf1f-482c-b615-f60b56983124",
+        "sample_type": "Solid Tissue Normal"
+      },
+      {
+        "file_id": "baec6a46-7c48-41ed-a8a9-eef52d32cba3",
+        "file_name": "eb17c782-c3a1-458d-8e2d-cadb58c7655a.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "52c51a3e04f6955a715a02ba33e94131",
+        "case_id": "17baef7c-d97d-4b98-ab53-503ef856523d",
+        "sample_id": "caca6c83-8d5f-4d85-a6a9-4ded98b71214",
+        "sample_type": "Solid Tissue Normal"
+      },
+      {
+        "file_id": "76cff555-d8a3-46d1-ac93-12d856adb445",
+        "file_name": "dbd18198-74a5-410d-bf38-08a0ca2fb207.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "832519c51c665cd663179fceae7e951d",
+        "case_id": "17c1d42c-cb84-4655-a4cd-b54bae17ecaf",
+        "sample_id": "1eb11f10-2aca-4ca1-b6fc-bbc97cc485fd",
+        "sample_type": "Solid Tissue Normal"
+      },
+      {
+        "file_id": "87d5686a-5d57-4ce2-b06a-dee5c2926ebf",
+        "file_name": "d920c232-82ae-48f9-98d1-b94bf4a45d8d.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "01c0588f5a3cc8c3dba9848ed6b50728",
+        "case_id": "18eb4dfc-556f-4bf3-a411-4780209ed1e0",
+        "sample_id": "9a81af95-30f8-45b1-bbda-ca5c7a91c5c5",
+        "sample_type": "Solid Tissue Normal"
+      },
+      {
+        "file_id": "ea1fadc2-1cdc-4658-9619-eeb26ae09da8",
+        "file_name": "9ee600fe-20c7-4b1f-b08f-15d3d38a5c52.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "151e826089cfc5f25208381c730421d1",
+        "case_id": "2021ed1f-dc75-4701-b8b8-1386466e4802",
+        "sample_id": "876a2145-5b7b-466b-b13f-81fcf028c9fd",
+        "sample_type": "Solid Tissue Normal"
+      },
+      {
+        "file_id": "21f16535-a7bb-4bbd-affe-bff937467374",
+        "file_name": "930d7c02-c230-4d19-9247-74fb0e02d524.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "46147814e6efbeba517a13e938b0fae4",
+        "case_id": "20e8106b-1290-4735-abe4-7621e08e3dc8",
+        "sample_id": "90fb06a9-35be-44b0-9f5b-eb270898aabe",
+        "sample_type": "Solid Tissue Normal"
+      },
+      {
+        "file_id": "3071e512-94ea-4820-9573-668235188e34",
+        "file_name": "da549530-7ba5-4302-acd2-40a766860216.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "5c8c4a05d55677456bf1615a8cf5e0b2",
+        "case_id": "214a4507-d974-4b3e-8525-7408fccc6a0f",
+        "sample_id": "ab96b212-ab38-4e27-8c61-5eef673a0798",
+        "sample_type": "Solid Tissue Normal"
+      },
+      {
+        "file_id": "ad8be67e-a885-4d33-8776-fa0a5f9863d1",
+        "file_name": "570b216f-f99d-4be8-b179-48c8d30c6c06.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "450b7704515633253e0c950d20aa341d",
+        "case_id": "21ef1730-e5a7-47ce-b419-d000bb59ae15",
+        "sample_id": "6c6c1c35-5e1b-4e9f-ab19-550d1ba4cc43",
+        "sample_type": "Solid Tissue Normal"
+      },
+      {
+        "file_id": "b88daf3f-645d-4d11-a2be-2295e186747f",
+        "file_name": "98b5b7d9-7f5d-48e0-ad50-7b22f379fef6.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "e3c997f705686155b4362f0d4f6cde4d",
+        "case_id": "233b02f3-c4f0-4a67-9db5-e68d5cdaccb6",
+        "sample_id": "0b290880-d67c-42b4-aa57-afd3c3d09518",
+        "sample_type": "Solid Tissue Normal"
+      },
+      {
+        "file_id": "75182885-7501-49b1-bb0d-8a88da1080a3",
+        "file_name": "0965a7ff-1a9f-4cc6-a822-970390b2de58.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "59df9be9f00b5d6de76aa042f856684a",
+        "case_id": "24334ac1-28a3-4b61-b590-3f51e375b247",
+        "sample_id": "aaeda2ea-cf26-445f-a367-85735fe80a27",
+        "sample_type": "Solid Tissue Normal"
+      },
+      {
+        "file_id": "808f4ac6-9bc9-402f-be36-b7ec8658c150",
+        "file_name": "769dff27-1f9c-422d-8ba0-703136a9d5ca.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "3f73ce9f5bf6fea02f6296671de01400",
+        "case_id": "2680da86-c977-4611-b75f-df015283c023",
+        "sample_id": "d8015844-0615-42f1-a81c-ae707dbe1693",
+        "sample_type": "Solid Tissue Normal"
+      },
+      {
+        "file_id": "736fca14-66fb-481a-985e-7253f75243a8",
+        "file_name": "217558e4-a5f5-4c72-91b7-b430a17f457a.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "d37ead104075a6695095f3d09f2d580a",
+        "case_id": "2b22db1d-54a1-4b9e-a86e-a174cf51d95c",
+        "sample_id": "a6ab4a8e-82f5-49a1-8264-36d415366424",
+        "sample_type": "Solid Tissue Normal"
+      },
+      {
+        "file_id": "4c2bb8e3-2527-466b-a3bb-0f36c3b2a3e7",
+        "file_name": "2d1e176a-adc9-4d8a-92cf-5cba5ab8e486.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "f18b1cb250955746893716a393fb20ed",
+        "case_id": "2cf68894-168b-458b-af4f-53cad72989a8",
+        "sample_id": "f4aaedfd-36df-4173-ae28-0a1065c39b6f",
+        "sample_type": "Solid Tissue Normal"
+      },
+      {
+        "file_id": "f11c5295-697a-46f7-91fe-b760dc9f1029",
+        "file_name": "e619b307-4391-48ab-9282-7f22b14f5afe.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "1677395ae138303a0c01a698c6f8a6e6",
+        "case_id": "327a2395-85c8-42e1-9638-8e037a1723ed",
+        "sample_id": "09733af3-d6fc-44a4-907e-16581fc48611",
+        "sample_type": "Solid Tissue Normal"
+      },
+      {
+        "file_id": "84cff855-d17a-4c09-b432-53893ae69c1e",
+        "file_name": "03d891b3-8faf-4384-94ce-2015f1ca5df0.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "a047d3255bf04eed49d33a5f41787b6c",
+        "case_id": "33fe5833-d7a0-43d7-a03d-56985ea448a6",
+        "sample_id": "2a679581-38ad-4742-8d7b-89015df11e7d",
+        "sample_type": "Solid Tissue Normal"
+      },
+      {
+        "file_id": "41e79241-b5a4-4541-848b-e20e693e8ee3",
+        "file_name": "22c2b380-799e-4fad-ae38-46a916c592d5.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "5667e8edecdc6efc588e8ef4fc97e41f",
+        "case_id": "001cef41-ff86-4d3f-a140-a647ac4b10a1",
+        "sample_id": "92058c44-a484-4e08-b1fe-dfe2f03a0aa1",
+        "sample_type": "Primary Tumor"
+      },
+      {
+        "file_id": "0e0df72c-33c0-4e4f-939c-a4d45a6e1ea3",
+        "file_name": "36125e17-48fd-4eea-874c-ed2e2e218402.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "45b96ac6c7a4f1fe0d20373d77d6bb8a",
+        "case_id": "0045349c-69d9-4306-a403-c9c1fa836644",
+        "sample_id": "f66358d4-9319-4c23-983d-ab5056daacf1",
+        "sample_type": "Primary Tumor"
+      },
+      {
+        "file_id": "94468afc-faea-4091-af0f-d2df8aec37da",
+        "file_name": "0781a18f-ce2a-478f-945e-49b2b8d7d941.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "fc4f1c0325d8e087f8fc8f33384af8f6",
+        "case_id": "00807dae-9f4a-4fd1-aac2-82eb11bf2afb",
+        "sample_id": "699d9e14-0968-4773-b077-17db941f5c38",
+        "sample_type": "Primary Tumor"
+      },
+      {
+        "file_id": "e14858ca-8bb5-4d6d-906c-5d62722d90f8",
+        "file_name": "fd6f4c9b-ee43-4939-8cfa-2e447aedbcf3.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "c5b28e998082f8ae66879e5ddd6b196f",
+        "case_id": "00a2d166-78c9-4687-a195-3d6315c27574",
+        "sample_id": "2e4b5ba3-ccc8-40f6-80ac-edaea1685204",
+        "sample_type": "Primary Tumor"
+      },
+      {
+        "file_id": "e6f927ef-840f-438a-9559-863cc64f71e0",
+        "file_name": "98447eef-e5af-4bfa-a215-7a1edd601c46.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "9efa2d1eab60fbbb19aae481bc97ddb8",
+        "case_id": "00b11ca8-8540-4a3d-b602-ec754b00230b",
+        "sample_id": "e0630a0d-d4aa-4c20-87ea-441ea60e6cfe",
+        "sample_type": "Primary Tumor"
+      },
+      {
+        "file_id": "2b519fff-dd2a-458e-ac2b-573167aeb7f2",
+        "file_name": "a02fb212-a6cc-40b2-9d31-481fc1ce0911.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "37e33763b42e600b4e1cc818633ac5a4",
+        "case_id": "011b9b2d-ebe5-42bf-9662-d922faccc7a1",
+        "sample_id": "d6023f30-0d07-4839-98d1-0b22b366cc51",
+        "sample_type": "Primary Tumor"
+      },
+      {
+        "file_id": "aa89d193-05a1-4f7f-9291-b9cf646656de",
+        "file_name": "e06580e9-0b4a-48f7-9522-d54229aefb2d.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "4f6befb7a85bb2d42b5d404d26add7ee",
+        "case_id": "01263518-5f7c-49dc-8d7e-84b0c03a6a63",
+        "sample_id": "5d1a5545-6934-41e5-b41b-8e0ee88e6ec6",
+        "sample_type": "Primary Tumor"
+      },
+      {
+        "file_id": "16b9a021-447f-44d8-a1f9-ad45edc73bc9",
+        "file_name": "13d6ae6d-1662-4e0a-a10b-a733efc216b2.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "4b8aa78f000b12f34a03c0e960c3bbe8",
+        "case_id": "0130d616-885e-4a6c-9d03-2f17dd692a05",
+        "sample_id": "c216cce6-3e13-466e-942d-348f9f803ab2",
+        "sample_type": "Primary Tumor"
+      },
+      {
+        "file_id": "dbdaac00-02bf-41e0-8d54-734273e10baa",
+        "file_name": "bf858293-b533-4a73-ac9b-568109ba05d4.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "f2a471b912bb9570c27799a8f418c5aa",
+        "case_id": "01674b2c-5cf2-478f-84a1-f69c39f47bd4",
+        "sample_id": "3d164bd9-7416-47af-a102-29954e3efe2c",
+        "sample_type": "Primary Tumor"
+      },
+      {
+        "file_id": "e173c170-b7c6-4aa9-9f34-33cd02702d75",
+        "file_name": "8d3d544f-6d1a-4cdc-8091-490311487ebd.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "dd39679fe62a68cd1203655864986533",
+        "case_id": "016caf42-4e19-4444-ab5d-6cf1e76c4afa",
+        "sample_id": "163000c7-0633-4d89-a84f-f487517248db",
+        "sample_type": "Primary Tumor"
+      },
+      {
+        "file_id": "f30b7e3e-f26d-47f7-a87f-6c1a4f074f65",
+        "file_name": "a7bca7c2-8c54-4ad1-9deb-7f77c962bb07.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "4b87e94f6fa77db5b14428fa8d5b2de8",
+        "case_id": "01eef340-598c-4205-a990-cec190ac2ca5",
+        "sample_id": "183a47b2-1b00-4a72-adeb-f35b55692ee1",
+        "sample_type": "Primary Tumor"
+      },
+      {
+        "file_id": "ee89e01e-d54e-4166-a3ae-db9357639523",
+        "file_name": "207b5c1c-3710-47bd-be2c-e1307631b28f.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "a594498bf05e67008010e00632060cd8",
+        "case_id": "01f50abf-fc15-446e-9d07-edeecc545a32",
+        "sample_id": "6ae685e1-cd02-4c07-839d-0f2507077955",
+        "sample_type": "Primary Tumor"
+      },
+      {
+        "file_id": "ef227e3c-7a6d-4c43-945f-c1c7b410d50b",
+        "file_name": "dbb2f12c-e200-412a-9023-0126d6d69a52.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "fe6aaaa0d49b064965f9e661f497758d",
+        "case_id": "029ce650-5e5a-4100-8596-cd94300e7ef5",
+        "sample_id": "cc3a7053-34f6-412f-85b8-de4c8b481d7e",
+        "sample_type": "Primary Tumor"
+      },
+      {
+        "file_id": "9d61e56d-690b-4d66-891a-f8d010d704cf",
+        "file_name": "ed13eb3a-17ab-4781-bc60-13797148c7c4.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "a206a82e80592fd4c903480b0f82440e",
+        "case_id": "02bed00f-bef7-4fb7-b243-540354990e45",
+        "sample_id": "c90925f3-2126-478f-b0d4-f3b2c50cfbf9",
+        "sample_type": "Primary Tumor"
+      },
+      {
+        "file_id": "051a1102-a815-4b39-b903-80d8b4a2348f",
+        "file_name": "7caf8867-7cff-4dbd-b611-4748d86590a8.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "99c1cdd68d27572859aa05189515f00d",
+        "case_id": "02bf5203-f9cd-4c5a-97b4-e5584dc22325",
+        "sample_id": "c6e14fab-a2a2-4102-8b70-2865757d2f48",
+        "sample_type": "Primary Tumor"
+      },
+      {
+        "file_id": "8ced7ce3-86ec-4bc8-afce-8fcfb06d8be4",
+        "file_name": "d1adf0be-5afe-4df7-8f88-dbf7521bcdac.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "5ab6cf779c351322446fb259fe5b16d4",
+        "case_id": "02e6f999-24f2-4ad2-9b92-df3ee2b082e5",
+        "sample_id": "3182e60d-be44-4f03-ba0c-431e0c1f1d5e",
+        "sample_type": "Primary Tumor"
+      },
+      {
+        "file_id": "56be281f-e85c-4dcb-9d75-cd9ae3430bbe",
+        "file_name": "92e7a9c0-ea88-419e-9afa-e7db5c8967b5.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "8ae1976ee5dfa4ecac3bbefa41ef8f32",
+        "case_id": "02f5ae33-a563-4ecb-9e33-dfa500a44931",
+        "sample_id": "7b2cc917-cd91-486b-bb9b-4c57cf4e86e0",
+        "sample_type": "Primary Tumor"
+      },
+      {
+        "file_id": "9da9a119-9f9a-4ddb-947e-97724b9fe45f",
+        "file_name": "7733c059-09bd-40b4-9812-4bedd68d9d01.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "767e0ec3e9114e20a332f8d2fc60954c",
+        "case_id": "03565036-b6d3-432f-8d9a-7099818e0788",
+        "sample_id": "63aa7e64-3d7c-43e8-87fa-f52855faed80",
+        "sample_type": "Primary Tumor"
+      },
+      {
+        "file_id": "43820fe3-a899-4e6b-9227-27e32edaefd5",
+        "file_name": "fc70931f-4a97-4538-b055-8ed988ab601c.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "cb089d7be1f0d606a9ad54e5244702fc",
+        "case_id": "035cb359-eac3-484a-9e88-3ddc739440a3",
+        "sample_id": "7b420e74-ed0d-416b-8355-9a80a61d6a4b",
+        "sample_type": "Primary Tumor"
+      },
+      {
+        "file_id": "f0a63361-78bb-4a7f-9d78-31f7b2980ba2",
+        "file_name": "1008e8d8-a93c-4779-80b6-1272322e7c52.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "7c75b69a65b6f1da8641783c6505586c",
+        "case_id": "03ab1e9f-4918-404d-b178-3a4fd929c5e8",
+        "sample_id": "69f11430-f6f2-46bd-ba02-f09cec02e168",
+        "sample_type": "Primary Tumor"
+      }
+    ],
+    "policy": "Normal first; unique case across both groups; sort case, sample, file UUID; cap each group"
+  },
+  "failed_at": "2026-09-19T09:07:09.756333+00:00",
+  "error": "Invalid gene IDs or negative counts",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/kothinti/Downloads/IRIS/backend/app/pipeline/runner.py\", line 55, in execute\n    counts, annotations, sources = retrieve(samples, progress)\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/kothinti/Downloads/IRIS/backend/app/tcga/client.py\", line 112, in retrieve\n    frame = parse_counts(path)\n            ^^^^^^^^^^^^^^^^^^\n  File \"/Users/kothinti/Downloads/IRIS/backend/app/tcga/client.py\", line 103, in parse_counts\n    raise ValueError('Invalid gene IDs or negative counts')\nValueError: Invalid gene IDs or negative counts\n"
+}

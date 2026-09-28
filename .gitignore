@@ -3,9 +3,14 @@ __pycache__/
 .pytest_cache/
 frontend/node_modules/
 frontend/.next/
-data/
+/data/
+!frontend/data/
 *.log
 .DS_Store
 .venv311/
+bin/
+env/
+deploy_render*.py
+update_render.py
 frontend/.next-preview/
 frontend/*.tsbuildinfo

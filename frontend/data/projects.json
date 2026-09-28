@@ -1,0 +1,587 @@
+[
+  {
+    "id": "TCGA-LUAD",
+    "summary": {
+      "case_count": 585
+    },
+    "primary_site": [
+      "Bronchus and lung"
+    ],
+    "project_id": "TCGA-LUAD",
+    "disease_type": [
+      "Cystic, Mucinous and Serous Neoplasms",
+      "Ductal and Lobular Neoplasms",
+      "Acinar Cell Neoplasms",
+      "Adenomas and Adenocarcinomas"
+    ],
+    "name": "Lung Adenocarcinoma"
+  },
+  {
+    "id": "TCGA-CHOL",
+    "summary": {
+      "case_count": 51
+    },
+    "primary_site": [
+      "Liver and intrahepatic bile ducts",
+      "Pancreas",
+      "Other and unspecified parts of biliary tract"
+    ],
+    "project_id": "TCGA-CHOL",
+    "disease_type": [
+      "Adenomas and Adenocarcinomas"
+    ],
+    "name": "Cholangiocarcinoma"
+  },
+  {
+    "id": "TCGA-ESCA",
+    "summary": {
+      "case_count": 185
+    },
+    "primary_site": [
+      "Esophagus",
+      "Stomach"
+    ],
+    "project_id": "TCGA-ESCA",
+    "disease_type": [
+      "Adenomas and Adenocarcinomas",
+      "Cystic, Mucinous and Serous Neoplasms",
+      "Squamous Cell Neoplasms"
+    ],
+    "name": "Esophageal Carcinoma"
+  },
+  {
+    "id": "TCGA-SKCM",
+    "summary": {
+      "case_count": 470
+    },
+    "primary_site": [
+      "Skin",
+      "Connective, subcutaneous and other soft tissues",
+      "Lymph nodes",
+      "Nasal cavity and middle ear",
+      "Vulva",
+      "Breast",
+      "Bones, joints and articular cartilage of other and unspecified sites",
+      "Retroperitoneum and peritoneum",
+      "Vagina",
+      "Colon",
+      "Adrenal gland",
+      "Corpus uteri",
+      "Other and ill-defined sites",
+      "Liver and intrahepatic bile ducts",
+      "Anus and anal canal",
+      "Spinal cord, cranial nerves, and other parts of central nervous system",
+      "Small intestine",
+      "Bronchus and lung",
+      "Brain",
+      "Parotid gland"
+    ],
+    "project_id": "TCGA-SKCM",
+    "disease_type": [
+      "Nevi and Melanomas"
+    ],
+    "name": "Skin Cutaneous Melanoma"
+  },
+  {
+    "id": "TCGA-DLBC",
+    "summary": {
+      "case_count": 58
+    },
+    "primary_site": [
+      "Colon",
+      "Stomach",
+      "Connective, subcutaneous and other soft tissues",
+      "Testis",
+      "Brain",
+      "Heart, mediastinum, and pleura",
+      "Other and unspecified major salivary glands",
+      "Breast",
+      "Small intestine",
+      "Bones, joints and articular cartilage of other and unspecified sites",
+      "Retroperitoneum and peritoneum",
+      "Thyroid gland",
+      "Lymph nodes",
+      "Hematopoietic and reticuloendothelial systems"
+    ],
+    "project_id": "TCGA-DLBC",
+    "disease_type": [
+      "Not Reported",
+      "Mature B-Cell Lymphomas"
+    ],
+    "name": "Lymphoid Neoplasm Diffuse Large B-cell Lymphoma"
+  },
+  {
+    "id": "TCGA-COAD",
+    "summary": {
+      "case_count": 461
+    },
+    "primary_site": [
+      "Rectosigmoid junction",
+      "Colon"
+    ],
+    "project_id": "TCGA-COAD",
+    "disease_type": [
+      "Epithelial Neoplasms, NOS",
+      "Adenomas and Adenocarcinomas",
+      "Cystic, Mucinous and Serous Neoplasms",
+      "Complex Epithelial Neoplasms"
+    ],
+    "name": "Colon Adenocarcinoma"
+  },
+  {
+    "id": "TCGA-THYM",
+    "summary": {
+      "case_count": 124
+    },
+    "primary_site": [
+      "Heart, mediastinum, and pleura",
+      "Other and ill-defined sites",
+      "Thymus"
+    ],
+    "project_id": "TCGA-THYM",
+    "disease_type": [
+      "Thymic Epithelial Neoplasms"
+    ],
+    "name": "Thymoma"
+  },
+  {
+    "id": "TCGA-SARC",
+    "summary": {
+      "case_count": 261
+    },
+    "primary_site": [
+      "Colon",
+      "Stomach",
+      "Meninges",
+      "Corpus uteri",
+      "Uterus, NOS",
+      "Other and unspecified male genital organs",
+      "Kidney",
+      "Peripheral nerves and autonomic nervous system",
+      "Retroperitoneum and peritoneum",
+      "Bones, joints and articular cartilage of limbs",
+      "Other and unspecified parts of tongue",
+      "Connective, subcutaneous and other soft tissues",
+      "Ovary"
+    ],
+    "project_id": "TCGA-SARC",
+    "disease_type": [
+      "Lipomatous Neoplasms",
+      "Fibromatous Neoplasms",
+      "Synovial-like Neoplasms",
+      "Myomatous Neoplasms",
+      "Nerve Sheath Tumors",
+      "Soft Tissue Tumors and Sarcomas, NOS"
+    ],
+    "name": "Sarcoma"
+  },
+  {
+    "id": "TCGA-CESC",
+    "summary": {
+      "case_count": 307
+    },
+    "primary_site": [
+      "Ovary",
+      "Cervix uteri"
+    ],
+    "project_id": "TCGA-CESC",
+    "disease_type": [
+      "Adenomas and Adenocarcinomas",
+      "Cystic, Mucinous and Serous Neoplasms",
+      "Complex Epithelial Neoplasms",
+      "Squamous Cell Neoplasms"
+    ],
+    "name": "Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma"
+  },
+  {
+    "id": "TCGA-PAAD",
+    "summary": {
+      "case_count": 185
+    },
+    "primary_site": [
+      "Pancreas"
+    ],
+    "project_id": "TCGA-PAAD",
+    "disease_type": [
+      "Epithelial Neoplasms, NOS",
+      "Ductal and Lobular Neoplasms",
+      "Cystic, Mucinous and Serous Neoplasms",
+      "Adenomas and Adenocarcinomas"
+    ],
+    "name": "Pancreatic Adenocarcinoma"
+  },
+  {
+    "id": "TCGA-KIRP",
+    "summary": {
+      "case_count": 291
+    },
+    "primary_site": [
+      "Kidney"
+    ],
+    "project_id": "TCGA-KIRP",
+    "disease_type": [
+      "Adenomas and Adenocarcinomas"
+    ],
+    "name": "Kidney Renal Papillary Cell Carcinoma"
+  },
+  {
+    "id": "TCGA-UCS",
+    "summary": {
+      "case_count": 57
+    },
+    "primary_site": [
+      "Corpus uteri",
+      "Uterus, NOS"
+    ],
+    "project_id": "TCGA-UCS",
+    "disease_type": [
+      "Basal Cell Neoplasms",
+      "Complex Mixed and Stromal Neoplasms"
+    ],
+    "name": "Uterine Carcinosarcoma"
+  },
+  {
+    "id": "TCGA-MESO",
+    "summary": {
+      "case_count": 87
+    },
+    "primary_site": [
+      "Heart, mediastinum, and pleura",
+      "Bronchus and lung"
+    ],
+    "project_id": "TCGA-MESO",
+    "disease_type": [
+      "Mesothelial Neoplasms"
+    ],
+    "name": "Mesothelioma"
+  },
+  {
+    "id": "TCGA-UVM",
+    "summary": {
+      "case_count": 80
+    },
+    "primary_site": [
+      "Eye and adnexa"
+    ],
+    "project_id": "TCGA-UVM",
+    "disease_type": [
+      "Nevi and Melanomas",
+      "Paragangliomas and Glomus Tumors"
+    ],
+    "name": "Uveal Melanoma"
+  },
+  {
+    "id": "TCGA-LAML",
+    "summary": {
+      "case_count": 200
+    },
+    "primary_site": [
+      "Hematopoietic and reticuloendothelial systems"
+    ],
+    "project_id": "TCGA-LAML",
+    "disease_type": [
+      "Myeloid Leukemias"
+    ],
+    "name": "Acute Myeloid Leukemia"
+  },
+  {
+    "id": "TCGA-ACC",
+    "summary": {
+      "case_count": 92
+    },
+    "primary_site": [
+      "Adrenal gland"
+    ],
+    "project_id": "TCGA-ACC",
+    "disease_type": [
+      "Adenomas and Adenocarcinomas"
+    ],
+    "name": "Adrenocortical Carcinoma"
+  },
+  {
+    "id": "TCGA-PCPG",
+    "summary": {
+      "case_count": 179
+    },
+    "primary_site": [
+      "Other endocrine glands and related structures",
+      "Adrenal gland",
+      "Heart, mediastinum, and pleura",
+      "Other and ill-defined sites",
+      "Spinal cord, cranial nerves, and other parts of central nervous system",
+      "Retroperitoneum and peritoneum",
+      "Connective, subcutaneous and other soft tissues"
+    ],
+    "project_id": "TCGA-PCPG",
+    "disease_type": [
+      "Paragangliomas and Glomus Tumors"
+    ],
+    "name": "Pheochromocytoma and Paraganglioma"
+  },
+  {
+    "id": "TCGA-READ",
+    "summary": {
+      "case_count": 172
+    },
+    "primary_site": [
+      "Colon",
+      "Unknown",
+      "Rectum",
+      "Rectosigmoid junction",
+      "Connective, subcutaneous and other soft tissues"
+    ],
+    "project_id": "TCGA-READ",
+    "disease_type": [
+      "Adenomas and Adenocarcinomas",
+      "Cystic, Mucinous and Serous Neoplasms"
+    ],
+    "name": "Rectum Adenocarcinoma"
+  },
+  {
+    "id": "TCGA-OV",
+    "summary": {
+      "case_count": 608
+    },
+    "primary_site": [
+      "Ovary",
+      "Retroperitoneum and peritoneum"
+    ],
+    "project_id": "TCGA-OV",
+    "disease_type": [
+      "Not Reported",
+      "Cystic, Mucinous and Serous Neoplasms"
+    ],
+    "name": "Ovarian Serous Cystadenocarcinoma"
+  },
+  {
+    "id": "TCGA-KICH",
+    "summary": {
+      "case_count": 113
+    },
+    "primary_site": [
+      "Kidney"
+    ],
+    "project_id": "TCGA-KICH",
+    "disease_type": [
+      "Adenomas and Adenocarcinomas"
+    ],
+    "name": "Kidney Chromophobe"
+  },
+  {
+    "id": "TCGA-HNSC",
+    "summary": {
+      "case_count": 528
+    },
+    "primary_site": [
+      "Base of tongue",
+      "Lip",
+      "Gum",
+      "Hypopharynx",
+      "Palate",
+      "Other and ill-defined sites in lip, oral cavity and pharynx",
+      "Bones, joints and articular cartilage of other and unspecified sites",
+      "Other and unspecified parts of tongue",
+      "Floor of mouth",
+      "Tonsil",
+      "Other and unspecified parts of mouth",
+      "Oropharynx",
+      "Larynx"
+    ],
+    "project_id": "TCGA-HNSC",
+    "disease_type": [
+      "Squamous Cell Neoplasms"
+    ],
+    "name": "Head and Neck Squamous Cell Carcinoma"
+  },
+  {
+    "id": "TCGA-UCEC",
+    "summary": {
+      "case_count": 560
+    },
+    "primary_site": [
+      "Corpus uteri",
+      "Uterus, NOS"
+    ],
+    "project_id": "TCGA-UCEC",
+    "disease_type": [
+      "Not Reported",
+      "Epithelial Neoplasms, NOS",
+      "Adenomas and Adenocarcinomas",
+      "Cystic, Mucinous and Serous Neoplasms"
+    ],
+    "name": "Uterine Corpus Endometrial Carcinoma"
+  },
+  {
+    "id": "TCGA-LIHC",
+    "summary": {
+      "case_count": 377
+    },
+    "primary_site": [
+      "Liver and intrahepatic bile ducts"
+    ],
+    "project_id": "TCGA-LIHC",
+    "disease_type": [
+      "Adenomas and Adenocarcinomas"
+    ],
+    "name": "Liver Hepatocellular Carcinoma"
+  },
+  {
+    "id": "TCGA-TGCT",
+    "summary": {
+      "case_count": 263
+    },
+    "primary_site": [
+      "Testis"
+    ],
+    "project_id": "TCGA-TGCT",
+    "disease_type": [
+      "Germ Cell Neoplasms"
+    ],
+    "name": "Testicular Germ Cell Tumors"
+  },
+  {
+    "id": "TCGA-BLCA",
+    "summary": {
+      "case_count": 412
+    },
+    "primary_site": [
+      "Bladder"
+    ],
+    "project_id": "TCGA-BLCA",
+    "disease_type": [
+      "Epithelial Neoplasms, NOS",
+      "Adenomas and Adenocarcinomas",
+      "Squamous Cell Neoplasms",
+      "Transitional Cell Papillomas and Carcinomas"
+    ],
+    "name": "Bladder Urothelial Carcinoma"
+  },
+  {
+    "id": "TCGA-PRAD",
+    "summary": {
+      "case_count": 500
+    },
+    "primary_site": [
+      "Prostate gland"
+    ],
+    "project_id": "TCGA-PRAD",
+    "disease_type": [
+      "Adenomas and Adenocarcinomas",
+      "Cystic, Mucinous and Serous Neoplasms",
+      "Acinar Cell Neoplasms",
+      "Ductal and Lobular Neoplasms"
+    ],
+    "name": "Prostate Adenocarcinoma"
+  },
+  {
+    "id": "TCGA-THCA",
+    "summary": {
+      "case_count": 507
+    },
+    "primary_site": [
+      "Thyroid gland"
+    ],
+    "project_id": "TCGA-THCA",
+    "disease_type": [
+      "Epithelial Neoplasms, NOS",
+      "Adenomas and Adenocarcinomas",
+      "Squamous Cell Neoplasms"
+    ],
+    "name": "Thyroid Carcinoma"
+  },
+  {
+    "id": "TCGA-LUSC",
+    "summary": {
+      "case_count": 504
+    },
+    "primary_site": [
+      "Bronchus and lung"
+    ],
+    "project_id": "TCGA-LUSC",
+    "disease_type": [
+      "Adenomas and Adenocarcinomas",
+      "Squamous Cell Neoplasms"
+    ],
+    "name": "Lung Squamous Cell Carcinoma"
+  },
+  {
+    "id": "TCGA-STAD",
+    "summary": {
+      "case_count": 443
+    },
+    "primary_site": [
+      "Stomach"
+    ],
+    "project_id": "TCGA-STAD",
+    "disease_type": [
+      "Adenomas and Adenocarcinomas",
+      "Cystic, Mucinous and Serous Neoplasms"
+    ],
+    "name": "Stomach Adenocarcinoma"
+  },
+  {
+    "id": "TCGA-LGG",
+    "summary": {
+      "case_count": 516
+    },
+    "primary_site": [
+      "Brain"
+    ],
+    "project_id": "TCGA-LGG",
+    "disease_type": [
+      "Gliomas"
+    ],
+    "name": "Brain Lower Grade Glioma"
+  },
+  {
+    "id": "TCGA-BRCA",
+    "summary": {
+      "case_count": 1098
+    },
+    "primary_site": [
+      "Breast"
+    ],
+    "project_id": "TCGA-BRCA",
+    "disease_type": [
+      "Cystic, Mucinous and Serous Neoplasms",
+      "Adenomas and Adenocarcinomas",
+      "Fibroepithelial Neoplasms",
+      "Basal Cell Neoplasms",
+      "Ductal and Lobular Neoplasms",
+      "Epithelial Neoplasms, NOS",
+      "Squamous Cell Neoplasms",
+      "Complex Epithelial Neoplasms",
+      "Adnexal and Skin Appendage Neoplasms"
+    ],
+    "name": "Breast Invasive Carcinoma"
+  },
+  {
+    "id": "TCGA-GBM",
+    "summary": {
+      "case_count": 617
+    },
+    "primary_site": [
+      "Brain"
+    ],
+    "project_id": "TCGA-GBM",
+    "disease_type": [
+      "Gliomas",
+      "Not Reported"
+    ],
+    "name": "Glioblastoma Multiforme"
+  },
+  {
+    "id": "TCGA-KIRC",
+    "summary": {
+      "case_count": 537
+    },
+    "primary_site": [
+      "Kidney"
+    ],
+    "project_id": "TCGA-KIRC",
+    "disease_type": [
+      "Adenomas and Adenocarcinomas"
+    ],
+    "name": "Kidney Renal Clear Cell Carcinoma"
+  }
+]

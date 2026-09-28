@@ -1,0 +1,30 @@
+{
+  "id": "b48f2f8a-22e8-4dad-a574-88ba626e2e58",
+  "cancer": "bronchogenic carcinoma",
+  "status": "failed",
+  "stage": "resolving",
+  "message": "No matching TCGA project. Try a specific cancer name or TCGA project code.",
+  "created_at": "2026-09-19T10:30:44.987053+00:00",
+  "events": [
+    {
+      "at": "2026-09-19T10:30:45.047587+00:00",
+      "stage": "resolving",
+      "message": "Resolving cancer against the public TCGA project catalog"
+    }
+  ],
+  "parameters": {
+    "cancer": "bronchogenic carcinoma",
+    "samples_per_group": 20,
+    "min_cpm": 1.0,
+    "min_fraction": 0.2,
+    "fdr": 0.05,
+    "effect": 1.0,
+    "max_genes": 150,
+    "min_overlap": 5,
+    "permutations": 100,
+    "seed": 42,
+    "top_k": 20
+  },
+  "updated_at": "2026-09-19T10:30:47.048947+00:00",
+  "error": "No matching TCGA project. Try a specific cancer name or TCGA project code."
+}
