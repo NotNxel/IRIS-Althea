@@ -1,0 +1,299 @@
+{
+  "id": "8a33c13e-ec42-4107-a139-a9c3f32722ae",
+  "cancer": "lung squamous cell carcinoma",
+  "status": "complete",
+  "created_at": "2026-09-28T19:12:13.152050+00:00",
+  "events": [
+    {
+      "at": "2026-09-28T19:12:13.173893+00:00",
+      "stage": "resolving",
+      "message": "Resolving cancer against the public TCGA project catalog"
+    },
+    {
+      "at": "2026-09-28T19:12:15.739036+00:00",
+      "stage": "retrieving",
+      "message": "Discovering open-access STAR counts"
+    },
+    {
+      "at": "2026-09-28T19:12:17.256051+00:00",
+      "stage": "retrieving",
+      "message": "Retrieving selected independent patient samples"
+    },
+    {
+      "at": "2026-09-28T19:12:17.566446+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 1/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:12:17.568190+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 2/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:12:17.614067+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 3/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:12:17.654510+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 4/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:12:17.784451+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 5/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:12:23.427874+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 6/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:12:24.186266+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 7/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:12:24.293213+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 8/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:12:24.652202+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 9/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:12:33.865174+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 10/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:12:34.703469+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 11/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:12:36.512070+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 12/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:12:41.705271+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 13/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:12:49.314191+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 14/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:12:49.762222+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 15/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:12:50.823805+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 16/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:12:57.542460+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 17/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:12:57.702673+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 18/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:12:57.746572+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 19/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:12:57.907017+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 20/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:12:57.940087+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 21/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:12:58.093006+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 22/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:12:58.135347+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 23/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:12:58.255723+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 24/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:13:04.364286+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 25/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:13:05.913105+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 26/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:13:08.108822+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 27/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:13:09.194461+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 28/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:13:14.746041+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 29/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:13:14.873166+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 30/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:13:19.819725+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 31/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:13:21.864720+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 32/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:13:22.581689+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 33/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:13:25.422741+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 34/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:13:25.542476+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 35/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:13:28.703925+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 36/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:13:31.800482+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 37/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:13:37.056874+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 38/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:13:39.096544+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 39/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:13:39.191057+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 40/40 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:13:42.797990+00:00",
+      "stage": "preprocessing",
+      "message": "Filtering low-expression genes and calculating library-size CPM"
+    },
+    {
+      "at": "2026-09-28T19:13:44.505880+00:00",
+      "stage": "differential",
+      "message": "Calculating effect sizes, Welch tests, and Benjamini\u2013Hochberg FDR"
+    },
+    {
+      "at": "2026-09-28T19:13:44.677495+00:00",
+      "stage": "perturbations",
+      "message": "Loading public LINCS library: LINCS_L1000_Chem_Pert_up"
+    },
+    {
+      "at": "2026-09-28T19:13:45.468580+00:00",
+      "stage": "perturbations",
+      "message": "Loading public LINCS library: LINCS_L1000_Chem_Pert_down"
+    },
+    {
+      "at": "2026-09-28T19:13:49.845069+00:00",
+      "stage": "scoring",
+      "message": "Scoring 33,132 paired chemical signatures; running gene-label permutations"
+    },
+    {
+      "at": "2026-09-28T19:13:50.221300+00:00",
+      "stage": "robustness",
+      "message": "Recalculating rankings under relaxed, stringent, and multi-context configurations"
+    },
+    {
+      "at": "2026-09-28T19:13:50.775901+00:00",
+      "stage": "exporting",
+      "message": "Saving rankings, context evidence, robustness results, and reproducibility audit"
+    },
+    {
+      "at": "2026-09-28T19:13:57.150480+00:00",
+      "stage": "complete",
+      "message": "Analysis complete; all displayed results calculated from public data"
+    }
+  ],
+  "parameters": {
+    "cancer": "lung squamous cell carcinoma",
+    "samples_per_group": 20,
+    "min_cpm": 1,
+    "min_fraction": 0.2,
+    "fdr": 0.05,
+    "effect": 1,
+    "max_genes": 150,
+    "min_overlap": 5,
+    "permutations": 100,
+    "seed": 42,
+    "top_k": 20
+  },
+  "stage": "complete",
+  "message": "Analysis complete; all displayed results calculated from public data",
+  "updated_at": "2026-09-28T19:13:57.150468+00:00",
+  "project": {
+    "id": "TCGA-LUSC",
+    "summary": {
+      "case_count": 504
+    },
+    "primary_site": [
+      "Bronchus and lung"
+    ],
+    "project_id": "TCGA-LUSC",
+    "disease_type": [
+      "Adenomas and Adenocarcinomas",
+      "Squamous Cell Neoplasms"
+    ],
+    "name": "Lung Squamous Cell Carcinoma"
+  },
+  "downloaded": 40,
+  "selected_samples": 40,
+  "genes_tested": 17700,
+  "perturbations": 33132,
+  "completed_at": "2026-09-28T19:13:57.151109+00:00"
+}
