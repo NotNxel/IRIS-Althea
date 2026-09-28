@@ -1,0 +1,51 @@
+{
+  "id": "2f224aaa-7336-4626-a998-67fa31820e07",
+  "cancer": "ovarian cancer",
+  "status": "insufficient_data",
+  "created_at": "2026-09-28T18:57:59.450912+00:00",
+  "events": [
+    {
+      "at": "2026-09-28T18:57:59.478998+00:00",
+      "stage": "resolving",
+      "message": "Resolving cancer against the public TCGA project catalog"
+    },
+    {
+      "at": "2026-09-28T18:58:01.997699+00:00",
+      "stage": "retrieving",
+      "message": "Discovering open-access STAR counts"
+    }
+  ],
+  "parameters": {
+    "cancer": "ovarian cancer",
+    "samples_per_group": 5,
+    "min_cpm": 1,
+    "min_fraction": 0.2,
+    "fdr": 0.05,
+    "effect": 1,
+    "max_genes": 150,
+    "min_overlap": 5,
+    "permutations": 100,
+    "seed": 42,
+    "top_k": 20
+  },
+  "stage": "retrieving",
+  "message": "Insufficient data: fewer than 3 independent Solid Tissue Normal samples.",
+  "updated_at": "2026-09-28T18:58:03.572291+00:00",
+  "project": {
+    "id": "TCGA-OV",
+    "summary": {
+      "case_count": 608
+    },
+    "primary_site": [
+      "Ovary",
+      "Retroperitoneum and peritoneum"
+    ],
+    "project_id": "TCGA-OV",
+    "disease_type": [
+      "Not Reported",
+      "Cystic, Mucinous and Serous Neoplasms"
+    ],
+    "name": "Ovarian Serous Cystadenocarcinoma"
+  },
+  "error": "Insufficient data: fewer than 3 independent Solid Tissue Normal samples."
+}

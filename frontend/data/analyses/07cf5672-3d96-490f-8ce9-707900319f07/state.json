@@ -1,0 +1,149 @@
+{
+  "id": "07cf5672-3d96-490f-8ce9-707900319f07",
+  "cancer": "lung squamous cell carcinoma",
+  "status": "complete",
+  "created_at": "2026-09-28T19:02:29.436621+00:00",
+  "events": [
+    {
+      "at": "2026-09-28T19:02:29.445101+00:00",
+      "stage": "resolving",
+      "message": "Resolving cancer against the public TCGA project catalog"
+    },
+    {
+      "at": "2026-09-28T19:02:32.109059+00:00",
+      "stage": "retrieving",
+      "message": "Discovering open-access STAR counts"
+    },
+    {
+      "at": "2026-09-28T19:02:33.515777+00:00",
+      "stage": "retrieving",
+      "message": "Retrieving selected independent patient samples"
+    },
+    {
+      "at": "2026-09-28T19:02:42.769531+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 1/10 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:02:44.088086+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 2/10 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:02:50.534861+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 3/10 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:02:53.685023+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 4/10 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:03:00.291282+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 5/10 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:03:01.970550+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 6/10 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:03:03.950827+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 7/10 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:03:08.148029+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 8/10 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:03:19.720411+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 9/10 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:03:25.316288+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 10/10 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:03:26.263501+00:00",
+      "stage": "preprocessing",
+      "message": "Filtering low-expression genes and calculating library-size CPM"
+    },
+    {
+      "at": "2026-09-28T19:03:26.691190+00:00",
+      "stage": "differential",
+      "message": "Calculating effect sizes, Welch tests, and Benjamini\u2013Hochberg FDR"
+    },
+    {
+      "at": "2026-09-28T19:03:26.855532+00:00",
+      "stage": "perturbations",
+      "message": "Loading public LINCS library: LINCS_L1000_Chem_Pert_up"
+    },
+    {
+      "at": "2026-09-28T19:03:27.771299+00:00",
+      "stage": "perturbations",
+      "message": "Loading public LINCS library: LINCS_L1000_Chem_Pert_down"
+    },
+    {
+      "at": "2026-09-28T19:03:31.715997+00:00",
+      "stage": "scoring",
+      "message": "Scoring 33,132 paired chemical signatures; running gene-label permutations"
+    },
+    {
+      "at": "2026-09-28T19:03:32.147821+00:00",
+      "stage": "robustness",
+      "message": "Recalculating rankings under relaxed, stringent, and multi-context configurations"
+    },
+    {
+      "at": "2026-09-28T19:03:32.872863+00:00",
+      "stage": "exporting",
+      "message": "Saving rankings, context evidence, robustness results, and reproducibility audit"
+    },
+    {
+      "at": "2026-09-28T19:03:40.478842+00:00",
+      "stage": "complete",
+      "message": "Analysis complete; all displayed results calculated from public data"
+    }
+  ],
+  "parameters": {
+    "cancer": "lung squamous cell carcinoma",
+    "samples_per_group": 5,
+    "min_cpm": 1,
+    "min_fraction": 0.2,
+    "fdr": 0.05,
+    "effect": 1,
+    "max_genes": 150,
+    "min_overlap": 5,
+    "permutations": 100,
+    "seed": 42,
+    "top_k": 20
+  },
+  "stage": "complete",
+  "message": "Analysis complete; all displayed results calculated from public data",
+  "updated_at": "2026-09-28T19:03:40.478831+00:00",
+  "project": {
+    "id": "TCGA-LUSC",
+    "summary": {
+      "case_count": 504
+    },
+    "primary_site": [
+      "Bronchus and lung"
+    ],
+    "project_id": "TCGA-LUSC",
+    "disease_type": [
+      "Adenomas and Adenocarcinomas",
+      "Squamous Cell Neoplasms"
+    ],
+    "name": "Lung Squamous Cell Carcinoma"
+  },
+  "downloaded": 10,
+  "selected_samples": 10,
+  "genes_tested": 18056,
+  "perturbations": 33132,
+  "completed_at": "2026-09-28T19:03:40.479542+00:00"
+}

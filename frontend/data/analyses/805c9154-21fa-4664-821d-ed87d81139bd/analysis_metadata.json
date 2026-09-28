@@ -1,0 +1,293 @@
+{
+  "id": "805c9154-21fa-4664-821d-ed87d81139bd",
+  "created_at": "2026-09-28T19:01:42.681148+00:00",
+  "input": "pancreatic cancer",
+  "parameters": {
+    "cancer": "pancreatic cancer",
+    "samples_per_group": 5,
+    "min_cpm": 1,
+    "min_fraction": 0.2,
+    "fdr": 0.05,
+    "effect": 1,
+    "max_genes": 150,
+    "min_overlap": 5,
+    "permutations": 100,
+    "seed": 42,
+    "top_k": 20
+  },
+  "software_version": "0.1.0",
+  "python": "3.14.6",
+  "limitations": [
+    "Exploratory Welch tests on log2(CPM+1), not a count-model differential expression analysis; no covariate or batch adjustment.",
+    "Deterministically capped, independent patient groups are not the full TCGA cohort and may not represent cancer subtypes.",
+    "Library-size CPM does not correct RNA composition bias. Normal tissue may differ in cellular composition.",
+    "LINCS GMTs are thresholded directional gene sets, not full L1000 expression matrices. Missing genes have zero contribution, not measured zero effect.",
+    "Exact uppercase gene-symbol matching only; outdated aliases can reduce coverage. Ambiguous duplicate TCGA symbols are excluded.",
+    "Dose units and replicate counts are not supplied by this GMT export. Contexts are cell/time/dose-label groups, not independent biological replicates.",
+    "Equal-weight median across contexts summarizes heterogeneous experiments; tissue relevance and pharmacological feasibility are not established.",
+    "Gene-label permutations are an exploratory null and do not preserve gene correlation or correct selection bias from overlap eligibility.",
+    "Clinical efficacy, safety, dosage, patient benefit, and literature validation are not evaluated."
+  ],
+  "dependencies": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "fastapi": "0.141.1",
+    "httpx": "0.28.1"
+  },
+  "source_checksums": {
+    "config.py": "712926479e3508a1a8b8572c67181ea1b6bd48cc3e66f132697aedb8182e7e79",
+    "io.py": "daebccfb94434c11c3c66a4256e3cec47f511122216ded516ac9d50ceab6008f",
+    "cross_cancer/compare.py": "10d103da359766130db99d973e5354b30d94202a17d4fba95a075884b88ed76b",
+    "tcga/client.py": "d65d186a01e7f45b797c7c6c515a98127decaf4c34727335acd9cf972f31dc02",
+    "differential/analyze.py": "920639190939046c8f59ae0658aa319ee36c6d66b4415deddb0712080d321284",
+    "pipeline/runner.py": "8c6d1fb8bd47c08121c0d8b38e212aaa6480e29cc4f87adee97bf210bfc3a73e",
+    "ranking/aggregate.py": "324e971958b931d3ae451a7cdbc2e1704655642a42877ec59c2cc299420060ff",
+    "robustness/compare.py": "8b1e9c3702f51a811a67b7fae0eafb9590b38698b562c742ff1541e08e3efcb6",
+    "signature/build.py": "20c5e4a19a153abfe1cecbae98f2d060164c62e7941731010f059a356bbfec69",
+    "scoring/reversal.py": "ff8473320628753f18add395ffcd4d17b1f90d52339445e35cfcbd34b73edc44",
+    "api/main.py": "d739da554c1cb7540d8844aaebeeb54063708d5f9587a50418c136a722b737ec",
+    "preprocessing/normalize.py": "0b542f2f8a0b4b74fa7229f7d6bbb7129098b602847662850720de919a69322a",
+    "perturbations/lincs.py": "2d449e4bf2ff355f439ecaaf6be5e5d87535ef90984f0104486f9fe3c4b19f21"
+  },
+  "gdc_release": {
+    "commit": "8f7c2a51ab0084b216ad1b62a3fae8b945439c53",
+    "data_release": "Data Release 46.0 - August 10, 2026",
+    "data_release_version": {
+      "major": 46,
+      "minor": 0,
+      "release_date": "2026-08-10"
+    },
+    "status": "OK",
+    "tag": "8.5.0",
+    "version": 1
+  },
+  "project": {
+    "id": "TCGA-PAAD",
+    "summary": {
+      "case_count": 185
+    },
+    "primary_site": [
+      "Pancreas"
+    ],
+    "project_id": "TCGA-PAAD",
+    "disease_type": [
+      "Epithelial Neoplasms, NOS",
+      "Ductal and Lobular Neoplasms",
+      "Cystic, Mucinous and Serous Neoplasms",
+      "Adenomas and Adenocarcinomas"
+    ],
+    "name": "Pancreatic Adenocarcinoma"
+  },
+  "discovery": {
+    "available_files": 183,
+    "selected_samples": [
+      {
+        "file_id": "812d3bd6-7bb6-4fb5-aac7-ffd7b4fcafed",
+        "file_name": "fb46e88b-fc77-447a-aa41-a6791c0767e1.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "e28808ad30b5cf1038d8a1c9ca10cb87",
+        "case_id": "758b70f6-8064-4f43-aabe-e5f968fe2955",
+        "sample_id": "a00c5af8-5504-46a0-9acc-b32190dbac10",
+        "sample_type": "Solid Tissue Normal"
+      },
+      {
+        "file_id": "f6e10a0d-b15f-46a9-909a-0a9fa7a130bd",
+        "file_name": "a527dbe2-ff8a-4351-9bf8-3477d3c008de.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "711f8390ee347fe85427f09218afb5b4",
+        "case_id": "7e4e5633-6f83-4b46-b6eb-64b3f2866ba3",
+        "sample_id": "0fc0fe04-ddc5-4b20-a3fc-5f2fcdff6782",
+        "sample_type": "Solid Tissue Normal"
+      },
+      {
+        "file_id": "6604da06-00ac-4894-92c6-4a7c0b48acd3",
+        "file_name": "e1f5eba9-3575-499e-bd32-1f9d7e8c9d6a.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "875fa6cb0a7dc0798666ed351271c014",
+        "case_id": "b84b58c7-95b8-4162-8e61-414f8fe422c6",
+        "sample_id": "fe9894b8-1cf6-43dc-8cc5-3322b781e2f5",
+        "sample_type": "Solid Tissue Normal"
+      },
+      {
+        "file_id": "4fb9dcda-853a-41e5-b840-8595f0c6927e",
+        "file_name": "e720a8b3-86ab-411f-87c4-4247529ce823.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "1e58e125019558595d272f4ba8dd1e22",
+        "case_id": "d4f66f06-9289-45c1-b9eb-aaef991a4bb6",
+        "sample_id": "9e5ebd9a-2e65-482a-a967-294c4673fc2d",
+        "sample_type": "Solid Tissue Normal"
+      },
+      {
+        "file_id": "d192cdd3-1eef-4579-ab22-e11dd9b8030c",
+        "file_name": "9379e3ff-7aa5-4c80-81f8-c3d328e4c473.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "c1f61796ab2d23be998f4f50fce33337",
+        "case_id": "01775b06-5836-469c-8537-120cb8cc94e9",
+        "sample_id": "3af7b231-6638-498f-b778-cefb69b59968",
+        "sample_type": "Primary Tumor"
+      },
+      {
+        "file_id": "9a48d83c-2674-48e6-a023-84170bf31145",
+        "file_name": "ebf880a4-a168-49e9-b861-d1fc1a8b7d27.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "b5f2ce88640a416e9976440acadf5dea",
+        "case_id": "02dbd5fa-e31f-4486-8df8-5b851f2e92bd",
+        "sample_id": "005f1dd8-49e2-4448-b37e-ac9fcffb02d6",
+        "sample_type": "Primary Tumor"
+      },
+      {
+        "file_id": "215525e7-fa5f-4495-a84d-17cd952dfcd3",
+        "file_name": "d9549977-831c-4e74-a836-a30cee4acf9a.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "cb6eaf6867cc84fd91b946e438af07ff",
+        "case_id": "02ef2e1a-5afe-4c00-a3ea-7f4a153f1da4",
+        "sample_id": "95c10f04-fb30-48b0-ae8b-ae90363da60c",
+        "sample_type": "Primary Tumor"
+      },
+      {
+        "file_id": "a4d0115d-3bb1-41df-b2a8-823cebc7104a",
+        "file_name": "e8eede96-3043-4c0a-bcd0-7e4281d9f278.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "76be9fabefcdf905b448b8fc2034df5d",
+        "case_id": "05d2adb3-5c6d-4edc-ba4c-bdbf628f4eee",
+        "sample_id": "a9f2a8e7-680c-4a24-a7cc-a67d50b746f3",
+        "sample_type": "Primary Tumor"
+      },
+      {
+        "file_id": "d73129d0-ec0b-46eb-817a-320040bc305d",
+        "file_name": "00bb756b-d7e2-4008-9a96-a706e43649eb.rna_seq.augmented_star_gene_counts.tsv",
+        "md5sum": "8a632470620f729c82be57998af9fd0b",
+        "case_id": "0944ce65-a89a-4916-b90a-f674b334281e",
+        "sample_id": "ced8751e-3265-4cfe-8289-d2c66dd0139c",
+        "sample_type": "Primary Tumor"
+      }
+    ],
+    "policy": "Normal first; unique case across both groups; sort case, sample, file UUID; cap each group"
+  },
+  "gdc_sources": [
+    {
+      "url": "https://api.gdc.cancer.gov/data/812d3bd6-7bb6-4fb5-aac7-ffd7b4fcafed",
+      "downloaded_at": "2026-09-28T19:02:05.696572+00:00",
+      "bytes": 4238774,
+      "sha256": "9fe72a5e9f073a3b3ebfb66e2520ecf32d338d5e51ce0c34e5f257ba9d0ca0c2",
+      "expected_md5": "e28808ad30b5cf1038d8a1c9ca10cb87",
+      "file_id": "812d3bd6-7bb6-4fb5-aac7-ffd7b4fcafed",
+      "file_name": "fb46e88b-fc77-447a-aa41-a6791c0767e1.rna_seq.augmented_star_gene_counts.tsv",
+      "md5sum": "e28808ad30b5cf1038d8a1c9ca10cb87",
+      "case_id": "758b70f6-8064-4f43-aabe-e5f968fe2955",
+      "sample_id": "a00c5af8-5504-46a0-9acc-b32190dbac10",
+      "sample_type": "Solid Tissue Normal"
+    },
+    {
+      "url": "https://api.gdc.cancer.gov/data/f6e10a0d-b15f-46a9-909a-0a9fa7a130bd",
+      "downloaded_at": "2026-09-28T19:02:05.355294+00:00",
+      "bytes": 4249281,
+      "sha256": "d3f2d9583c5a562a466b7f7d22ccebb00fa731dd3410734f32bef82f36a0022c",
+      "expected_md5": "711f8390ee347fe85427f09218afb5b4",
+      "file_id": "f6e10a0d-b15f-46a9-909a-0a9fa7a130bd",
+      "file_name": "a527dbe2-ff8a-4351-9bf8-3477d3c008de.rna_seq.augmented_star_gene_counts.tsv",
+      "md5sum": "711f8390ee347fe85427f09218afb5b4",
+      "case_id": "7e4e5633-6f83-4b46-b6eb-64b3f2866ba3",
+      "sample_id": "0fc0fe04-ddc5-4b20-a3fc-5f2fcdff6782",
+      "sample_type": "Solid Tissue Normal"
+    },
+    {
+      "url": "https://api.gdc.cancer.gov/data/6604da06-00ac-4894-92c6-4a7c0b48acd3",
+      "downloaded_at": "2026-09-28T19:01:57.556363+00:00",
+      "bytes": 4237711,
+      "sha256": "0866fd52a70470ac54ad0c58e3501104a92b606e4ebcdd22626073e5f3a33d30",
+      "expected_md5": "875fa6cb0a7dc0798666ed351271c014",
+      "file_id": "6604da06-00ac-4894-92c6-4a7c0b48acd3",
+      "file_name": "e1f5eba9-3575-499e-bd32-1f9d7e8c9d6a.rna_seq.augmented_star_gene_counts.tsv",
+      "md5sum": "875fa6cb0a7dc0798666ed351271c014",
+      "case_id": "b84b58c7-95b8-4162-8e61-414f8fe422c6",
+      "sample_id": "fe9894b8-1cf6-43dc-8cc5-3322b781e2f5",
+      "sample_type": "Solid Tissue Normal"
+    },
+    {
+      "url": "https://api.gdc.cancer.gov/data/4fb9dcda-853a-41e5-b840-8595f0c6927e",
+      "downloaded_at": "2026-09-28T19:01:54.465074+00:00",
+      "bytes": 4234447,
+      "sha256": "c6e8de8f6a4ef7c260bf672e76e7dc1e47d8b1242dca6ce17a0b720e1d09e575",
+      "expected_md5": "1e58e125019558595d272f4ba8dd1e22",
+      "file_id": "4fb9dcda-853a-41e5-b840-8595f0c6927e",
+      "file_name": "e720a8b3-86ab-411f-87c4-4247529ce823.rna_seq.augmented_star_gene_counts.tsv",
+      "md5sum": "1e58e125019558595d272f4ba8dd1e22",
+      "case_id": "d4f66f06-9289-45c1-b9eb-aaef991a4bb6",
+      "sample_id": "9e5ebd9a-2e65-482a-a967-294c4673fc2d",
+      "sample_type": "Solid Tissue Normal"
+    },
+    {
+      "url": "https://api.gdc.cancer.gov/data/d192cdd3-1eef-4579-ab22-e11dd9b8030c",
+      "downloaded_at": "2026-09-28T19:02:15.606063+00:00",
+      "bytes": 4256586,
+      "sha256": "1f1fd19fe592b0fdc2d0d12807d866569245a31a742803cf1c063e3de7d22f80",
+      "expected_md5": "c1f61796ab2d23be998f4f50fce33337",
+      "file_id": "d192cdd3-1eef-4579-ab22-e11dd9b8030c",
+      "file_name": "9379e3ff-7aa5-4c80-81f8-c3d328e4c473.rna_seq.augmented_star_gene_counts.tsv",
+      "md5sum": "c1f61796ab2d23be998f4f50fce33337",
+      "case_id": "01775b06-5836-469c-8537-120cb8cc94e9",
+      "sample_id": "3af7b231-6638-498f-b778-cefb69b59968",
+      "sample_type": "Primary Tumor"
+    },
+    {
+      "url": "https://api.gdc.cancer.gov/data/9a48d83c-2674-48e6-a023-84170bf31145",
+      "downloaded_at": "2026-09-28T19:02:09.147237+00:00",
+      "bytes": 4255484,
+      "sha256": "92f3b7fc6b6c71857cf2af7f475f50b2cf192b6b39292ef8a55d5c203478d80a",
+      "expected_md5": "b5f2ce88640a416e9976440acadf5dea",
+      "file_id": "9a48d83c-2674-48e6-a023-84170bf31145",
+      "file_name": "ebf880a4-a168-49e9-b861-d1fc1a8b7d27.rna_seq.augmented_star_gene_counts.tsv",
+      "md5sum": "b5f2ce88640a416e9976440acadf5dea",
+      "case_id": "02dbd5fa-e31f-4486-8df8-5b851f2e92bd",
+      "sample_id": "005f1dd8-49e2-4448-b37e-ac9fcffb02d6",
+      "sample_type": "Primary Tumor"
+    },
+    {
+      "url": "https://api.gdc.cancer.gov/data/215525e7-fa5f-4495-a84d-17cd952dfcd3",
+      "downloaded_at": "2026-09-28T19:02:16.206517+00:00",
+      "bytes": 4259958,
+      "sha256": "329769378dd94f116f20ffd6e92e209b2aba874584ca32342560ecac5630d59b",
+      "expected_md5": "cb6eaf6867cc84fd91b946e438af07ff",
+      "file_id": "215525e7-fa5f-4495-a84d-17cd952dfcd3",
+      "file_name": "d9549977-831c-4e74-a836-a30cee4acf9a.rna_seq.augmented_star_gene_counts.tsv",
+      "md5sum": "cb6eaf6867cc84fd91b946e438af07ff",
+      "case_id": "02ef2e1a-5afe-4c00-a3ea-7f4a153f1da4",
+      "sample_id": "95c10f04-fb30-48b0-ae8b-ae90363da60c",
+      "sample_type": "Primary Tumor"
+    },
+    {
+      "url": "https://api.gdc.cancer.gov/data/a4d0115d-3bb1-41df-b2a8-823cebc7104a",
+      "downloaded_at": "2026-09-28T19:02:19.476004+00:00",
+      "bytes": 4235050,
+      "sha256": "dad87266cfa617019bb24721136b4b8d8519f3ccd6b718bf88c092579f3c5d37",
+      "expected_md5": "76be9fabefcdf905b448b8fc2034df5d",
+      "file_id": "a4d0115d-3bb1-41df-b2a8-823cebc7104a",
+      "file_name": "e8eede96-3043-4c0a-bcd0-7e4281d9f278.rna_seq.augmented_star_gene_counts.tsv",
+      "md5sum": "76be9fabefcdf905b448b8fc2034df5d",
+      "case_id": "05d2adb3-5c6d-4edc-ba4c-bdbf628f4eee",
+      "sample_id": "a9f2a8e7-680c-4a24-a7cc-a67d50b746f3",
+      "sample_type": "Primary Tumor"
+    },
+    {
+      "url": "https://api.gdc.cancer.gov/data/d73129d0-ec0b-46eb-817a-320040bc305d",
+      "downloaded_at": "2026-09-28T19:02:27.960952+00:00",
+      "bytes": 4238430,
+      "sha256": "d750ed9c8419dd39e8b0a3bada286b42603a3f55c59a0f0e66dab90599ce2efd",
+      "expected_md5": "8a632470620f729c82be57998af9fd0b",
+      "file_id": "d73129d0-ec0b-46eb-817a-320040bc305d",
+      "file_name": "00bb756b-d7e2-4008-9a96-a706e43649eb.rna_seq.augmented_star_gene_counts.tsv",
+      "md5sum": "8a632470620f729c82be57998af9fd0b",
+      "case_id": "0944ce65-a89a-4916-b90a-f674b334281e",
+      "sample_id": "ced8751e-3265-4cfe-8289-d2c66dd0139c",
+      "sample_type": "Primary Tumor"
+    }
+  ],
+  "library_sizes": {
+    "a00c5af8-5504-46a0-9acc-b32190dbac10": 34845597,
+    "0fc0fe04-ddc5-4b20-a3fc-5f2fcdff6782": 58706385,
+    "fe9894b8-1cf6-43dc-8cc5-3322b781e2f5": 47681191,
+    "9e5ebd9a-2e65-482a-a967-294c4673fc2d": 39608027,
+    "3af7b231-6638-498f-b778-cefb69b59968": 56333124,
+    "005f1dd8-49e2-4448-b37e-ac9fcffb02d6": 61953329,
+    "95c10f04-fb30-48b0-ae8b-ae90363da60c": 65844439,
+    "a9f2a8e7-680c-4a24-a7cc-a67d50b746f3": 39608016,
+    "ced8751e-3265-4cfe-8289-d2c66dd0139c": 65830070
+  },
+  "failed_at": "2026-09-28T19:02:29.431263+00:00",
+  "error": "Insufficient data: thresholds did not produce both UP and DOWN genes. Inspect differential_expression.csv or change thresholds.",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/neelnikhil/Desktop/Programming/ISEF - Althea/backend/app/pipeline/runner.py\", line 83, in execute\n    raise InsufficientData('Insufficient data: thresholds did not produce both UP and DOWN genes. Inspect differential_expression.csv or change thresholds.')\napp.tcga.client.InsufficientData: Insufficient data: thresholds did not produce both UP and DOWN genes. Inspect differential_expression.csv or change thresholds.\n"
+}

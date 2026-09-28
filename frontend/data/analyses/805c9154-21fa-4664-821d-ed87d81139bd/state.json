@@ -1,0 +1,115 @@
+{
+  "id": "805c9154-21fa-4664-821d-ed87d81139bd",
+  "cancer": "pancreatic cancer",
+  "status": "insufficient_data",
+  "created_at": "2026-09-28T19:01:42.681148+00:00",
+  "events": [
+    {
+      "at": "2026-09-28T19:01:42.711191+00:00",
+      "stage": "resolving",
+      "message": "Resolving cancer against the public TCGA project catalog"
+    },
+    {
+      "at": "2026-09-28T19:01:45.324648+00:00",
+      "stage": "retrieving",
+      "message": "Discovering open-access STAR counts"
+    },
+    {
+      "at": "2026-09-28T19:01:46.919849+00:00",
+      "stage": "retrieving",
+      "message": "Retrieving selected independent patient samples"
+    },
+    {
+      "at": "2026-09-28T19:01:54.579663+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 1/9 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:01:57.687717+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 2/9 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:02:05.473161+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 3/9 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:02:05.807852+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 4/9 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:02:09.259718+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 5/9 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:02:15.720263+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 6/9 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:02:16.319983+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 7/9 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:02:19.587177+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 8/9 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:02:28.072169+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 9/9 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:02:28.903291+00:00",
+      "stage": "preprocessing",
+      "message": "Filtering low-expression genes and calculating library-size CPM"
+    },
+    {
+      "at": "2026-09-28T19:02:29.289983+00:00",
+      "stage": "differential",
+      "message": "Calculating effect sizes, Welch tests, and Benjamini\u2013Hochberg FDR"
+    }
+  ],
+  "parameters": {
+    "cancer": "pancreatic cancer",
+    "samples_per_group": 5,
+    "min_cpm": 1,
+    "min_fraction": 0.2,
+    "fdr": 0.05,
+    "effect": 1,
+    "max_genes": 150,
+    "min_overlap": 5,
+    "permutations": 100,
+    "seed": 42,
+    "top_k": 20
+  },
+  "stage": "differential",
+  "message": "Insufficient data: thresholds did not produce both UP and DOWN genes. Inspect differential_expression.csv or change thresholds.",
+  "updated_at": "2026-09-28T19:02:29.432115+00:00",
+  "project": {
+    "id": "TCGA-PAAD",
+    "summary": {
+      "case_count": 185
+    },
+    "primary_site": [
+      "Pancreas"
+    ],
+    "project_id": "TCGA-PAAD",
+    "disease_type": [
+      "Epithelial Neoplasms, NOS",
+      "Ductal and Lobular Neoplasms",
+      "Cystic, Mucinous and Serous Neoplasms",
+      "Adenomas and Adenocarcinomas"
+    ],
+    "name": "Pancreatic Adenocarcinoma"
+  },
+  "downloaded": 9,
+  "selected_samples": 9,
+  "genes_tested": 18021,
+  "error": "Insufficient data: thresholds did not produce both UP and DOWN genes. Inspect differential_expression.csv or change thresholds."
+}

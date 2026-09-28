@@ -1,0 +1,136 @@
+{
+  "id": "43242610-084e-436a-9de8-b25799db4b21",
+  "cancer": "bladder cancer",
+  "status": "insufficient_data",
+  "created_at": "2026-09-28T19:00:58.252146+00:00",
+  "events": [
+    {
+      "at": "2026-09-28T19:00:58.272045+00:00",
+      "stage": "resolving",
+      "message": "Resolving cancer against the public TCGA project catalog"
+    },
+    {
+      "at": "2026-09-28T19:01:00.648887+00:00",
+      "stage": "retrieving",
+      "message": "Discovering open-access STAR counts"
+    },
+    {
+      "at": "2026-09-28T19:01:03.368941+00:00",
+      "stage": "retrieving",
+      "message": "Retrieving selected independent patient samples"
+    },
+    {
+      "at": "2026-09-28T19:01:09.723059+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 1/10 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:01:09.978520+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 2/10 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:01:10.725745+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 3/10 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:01:17.036424+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 4/10 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:01:20.703010+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 5/10 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:01:20.921686+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 6/10 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:01:22.783190+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 7/10 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:01:27.276035+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 8/10 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:01:27.780512+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 9/10 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:01:36.147424+00:00",
+      "stage": "retrieving",
+      "message": "Retrieved 10/10 verified STAR count files"
+    },
+    {
+      "at": "2026-09-28T19:01:37.031321+00:00",
+      "stage": "preprocessing",
+      "message": "Filtering low-expression genes and calculating library-size CPM"
+    },
+    {
+      "at": "2026-09-28T19:01:37.466983+00:00",
+      "stage": "differential",
+      "message": "Calculating effect sizes, Welch tests, and Benjamini\u2013Hochberg FDR"
+    },
+    {
+      "at": "2026-09-28T19:01:37.605066+00:00",
+      "stage": "perturbations",
+      "message": "Loading public LINCS library: LINCS_L1000_Chem_Pert_up"
+    },
+    {
+      "at": "2026-09-28T19:01:38.398708+00:00",
+      "stage": "perturbations",
+      "message": "Loading public LINCS library: LINCS_L1000_Chem_Pert_down"
+    },
+    {
+      "at": "2026-09-28T19:01:42.360501+00:00",
+      "stage": "scoring",
+      "message": "Scoring 33,132 paired chemical signatures; running gene-label permutations"
+    }
+  ],
+  "parameters": {
+    "cancer": "bladder cancer",
+    "samples_per_group": 5,
+    "min_cpm": 1,
+    "min_fraction": 0.2,
+    "fdr": 0.05,
+    "effect": 1,
+    "max_genes": 150,
+    "min_overlap": 5,
+    "permutations": 100,
+    "seed": 42,
+    "top_k": 20
+  },
+  "stage": "scoring",
+  "message": "Insufficient data: no perturbations met gene-overlap requirements.",
+  "updated_at": "2026-09-28T19:01:42.543739+00:00",
+  "project": {
+    "id": "TCGA-BLCA",
+    "summary": {
+      "case_count": 412
+    },
+    "primary_site": [
+      "Bladder"
+    ],
+    "project_id": "TCGA-BLCA",
+    "disease_type": [
+      "Epithelial Neoplasms, NOS",
+      "Adenomas and Adenocarcinomas",
+      "Squamous Cell Neoplasms",
+      "Transitional Cell Papillomas and Carcinomas"
+    ],
+    "name": "Bladder Urothelial Carcinoma"
+  },
+  "downloaded": 10,
+  "selected_samples": 10,
+  "genes_tested": 17575,
+  "perturbations": 33132,
+  "error": "Insufficient data: no perturbations met gene-overlap requirements."
+}
