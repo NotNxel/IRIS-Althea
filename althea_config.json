@@ -1,0 +1,13 @@
+{
+  "_note": "Defaults from backend/app/api/main.py. Every completed run records its own values in analysis_metadata.json (see RUN_INDEX.md). Runs for TCGA-LIHC, THCA, KIRC and HNSC used min_overlap=3.",
+  "seed": 42,
+  "permutations": 100,
+  "samples_per_group": 20,
+  "min_cpm": 1,
+  "min_fraction": 0.2,
+  "fdr": 0.05,
+  "effect_min_abs_log2fc": 1,
+  "max_genes_per_direction": 150,
+  "min_overlap": 5,
+  "top_k": 20
+}
