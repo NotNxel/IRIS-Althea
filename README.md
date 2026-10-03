@@ -80,4 +80,5 @@ The real-data integration test verifies a completed actual analysis and independ
 - `frontend/components/`: polling, candidate evidence, charts/tables, API client, shell.
 - `data/`: locally generated, ignored caches and results.
 
-Further documentation: [ARCHITECTURE.md](ARCHITECTURE.md), [DATA_SOURCES.md](DATA_SOURCES.md), [REPRODUCIBILITY.md](REPRODUCIBILITY.md), [DEMO.md](DEMO.md).
+
+Further documentation: [ARCHITECTURE.md](ARCHITECTURE.md), [DATA_SOURCES.md](DATA_SOURCES.md), [REPRODUCIBILITY.md](REPRODUCIBILITY.md), [DEMO.md](DEMO.md),[Seed and parameters](configs/althea_config.json), [results by cancer](RUN_INDEX.md).
